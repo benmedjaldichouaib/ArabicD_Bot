@@ -42,7 +42,7 @@ prompt = f"""
 فقط الكلمة المفردة أو الأصلية.
 إذا كانت الكلمة أصلية فعلًا، أعد نفس الكلمة فقط.
 """
-model = genai.GenerativeModel("gemini-2.0-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 response = model.generate_content(prompt)
 return response.text.strip().split()[0] if response.text else word
 
@@ -149,3 +149,4 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message))
 print("🤖 Bot is running...")
 app.run_polling()
+
