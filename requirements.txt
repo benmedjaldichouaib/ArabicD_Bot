@@ -1,6 +1,7 @@
 python-telegram-bot==20.5
-pandas==2.1.0
+
 gTTS==2.3.2
-camel-tools==1.1.4
+
 google-generativeai==0.1.6
+
 
